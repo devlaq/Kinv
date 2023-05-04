@@ -4,9 +4,9 @@ import org.bukkit.inventory.ItemStack
 
 class KinvBuilder {
 
-    class BodyBuilder {
+    class BodyBuilder(row: Int) {
 
-        internal val contents: Array<Array<KinvElement>> = Array(6) { Array(9) { KinvEmptyElement() } }
+        internal val contents: Array<Array<KinvElement>> = Array(row) { Array(9) { KinvEmptyElement() } }
 
         fun selector() = KinvEmptySelector()
 
@@ -52,6 +52,6 @@ class KinvBuilder {
     }
 
     fun body(builder: BodyBuilder.() -> Unit) {
-        body = BodyBuilder().apply(builder).contents
+        body = BodyBuilder(type.inventoryProvider(title).size / 9).apply(builder).contents
     }
 }
