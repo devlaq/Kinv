@@ -1,5 +1,8 @@
-import event.InventoryEventListener
+package com.github.devlaq.kinv
+
+import com.github.devlaq.kinv.event.InventoryEventListener
 import org.bukkit.Bukkit
+import org.bukkit.entity.HumanEntity
 import org.bukkit.entity.Player
 import org.bukkit.inventory.Inventory
 import org.bukkit.inventory.InventoryView
@@ -38,7 +41,7 @@ class Kinv(
         return inventory
     }
 
-    fun show(player: Player) {
+    fun show(player: HumanEntity) {
         val view = player.openInventory(createInventory())
 
         view?.let {

@@ -1,3 +1,5 @@
+package com.github.devlaq.kinv
+
 import org.bukkit.inventory.InventoryView
 
 object KinvRegistry {

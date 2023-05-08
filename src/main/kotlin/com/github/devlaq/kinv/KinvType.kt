@@ -1,3 +1,5 @@
+package com.github.devlaq.kinv
+
 import org.bukkit.Bukkit
 import org.bukkit.inventory.Inventory
 
